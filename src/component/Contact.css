@@ -1,0 +1,253 @@
+/* تنسيقات خاصة بقسم التواصل فقط */
+.cosmic-contact {
+  position: relative;
+  padding: 8rem 2rem;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #0f0c29, #1e1b4b, #0f172a);
+  color: white;
+  isolation: isolate;
+}
+
+/* تأثيرات النجوم الخاصة بهذا القسم فقط */
+.cosmic-contact .cosmic-stars, 
+.cosmic-contact .cosmic-twinkling,
+.cosmic-contact .cosmic-meteors {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.cosmic-contact .cosmic-stars {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="40" cy="20" r="0.8" fill="white" opacity="0.8"/><circle cx="70" cy="80" r="0.6" fill="white" opacity="0.6"/><circle cx="10" cy="50" r="0.7" fill="white" opacity="0.7"/><circle cx="90" cy="30" r="0.5" fill="white" opacity="0.5"/><circle cx="20" cy="90" r="0.9" fill="white" opacity="0.9"/><circle cx="60" cy="10" r="0.4" fill="white" opacity="0.4"/></svg>') repeat;
+  opacity: 0.8;
+}
+
+.cosmic-contact .cosmic-twinkling {
+  background: transparent;
+  animation: contact-twinkle 8s infinite alternate;
+}
+
+@keyframes contact-twinkle {
+  0% { opacity: 0.3; }
+  100% { opacity: 0.8; }
+}
+
+.cosmic-contact .meteor {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 15px 3px white;
+  animation: contact-meteor-fall 12s linear infinite;
+}
+
+.cosmic-contact .meteor:nth-child(1) {
+  top: 15%;
+  left: 85%;
+  animation-delay: 2s;
+}
+
+.cosmic-contact .meteor:nth-child(2) {
+  top: 25%;
+  left: 75%;
+  animation-delay: 5s;
+  animation-duration: 15s;
+}
+
+@keyframes contact-meteor-fall {
+  0% { transform: translateX(0) translateY(0); opacity: 1; }
+  70% { opacity: 0.8; }
+  100% { transform: translateX(-600px) translateY(600px); opacity: 0; }
+}
+
+/* تصميم الكونتينر الخاص بهذا القسم */
+.cosmic-contact .cosmic-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.cosmic-contact .cosmic-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.cosmic-contact .cosmic-subtitle {
+  font-size: 1.2rem;
+  color: #a5b4fc;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+
+.cosmic-contact .cosmic-title {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to right, #a5b4fc, #818cf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1.2;
+}
+
+.cosmic-contact .cosmic-text-glow {
+  text-shadow: 0 0 15px rgba(165, 180, 252, 0.5);
+}
+
+.cosmic-contact .cosmic-description {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #cbd5e1;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+/* محتوى التواصل */
+.cosmic-contact .contact-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+@media (min-width: 992px) {
+  .cosmic-contact .contact-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* معلومات التواصل */
+.cosmic-contact .contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cosmic-contact .info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background: linear-gradient(135deg, #0f0c29 0%, #592856 50%, #24243e 100%);
+  backdrop-filter: blur(10px);
+  border-radius: 1.5rem;
+  padding: 1.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
+}
+
+.cosmic-contact .cosmic-glow-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border-color: rgba(129, 140, 248, 0.3);
+}
+
+.cosmic-contact .info-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(129, 140, 248, 0.1);
+  border-radius: 50%;
+  font-size: 1.3rem;
+  color: #818cf8;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.cosmic-contact .cosmic-glow-card:hover .info-icon {
+  background: rgba(129, 140, 248, 0.2);
+  color: #a5b4fc;
+  transform: scale(1.1);
+}
+
+.cosmic-contact .info-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #e2e8f0;
+}
+
+.cosmic-contact .info-content p {
+  color: #ffffff;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* روابط التواصل الاجتماعي */
+.cosmic-contact .social-links {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.cosmic-contact .social-link {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+}
+
+.cosmic-contact .cosmic-glow-hover:hover {
+  background: var(--social-glow);
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 5px 20px var(--social-glow);
+  color: white;
+}
+
+/* تأثير الكوكب المداري */
+.cosmic-contact .orbiting-planet {
+  position: absolute;
+  width: var(--orbit-size);
+  height: var(--orbit-size);
+  top: 50%;
+  right: -100px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  animation: contact-orbit 20s linear infinite;
+  z-index: -1;
+}
+
+.cosmic-contact .planet-core {
+  position: absolute;
+  width: var(--planet-size);
+  height: var(--planet-size);
+  background: radial-gradient(circle at 30% 30%, #6366f1, #4338ca);
+  border-radius: 50%;
+  top: calc(50% - var(--planet-size)/2);
+  left: calc(50% - var(--planet-size)/2);
+  box-shadow: 0 0 30px #6366f1;
+}
+
+@keyframes contact-orbit {
+  0% { transform: translateY(-50%) rotate(0deg); }
+  100% { transform: translateY(-50%) rotate(360deg); }
+}
+
+/* تأثيرات الاستجابة */
+@media (max-width: 768px) {
+  .cosmic-contact {
+    padding: 6rem 1.5rem;
+  }
+  
+  .cosmic-contact .cosmic-title {
+    font-size: 2.5rem;
+  }
+  
+  .cosmic-contact .orbiting-planet {
+    display: none;
+  }
+}

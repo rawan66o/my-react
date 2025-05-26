@@ -1,0 +1,403 @@
+/* الخلفية الفضائية */
+.cosmic-about {
+  position: relative;
+  background: radial-gradient(ellipse at bottom, #0f0c29 0%, #1a1a2e 100%);
+  color: #ffffff;
+  padding: 8rem 0;
+  overflow: hidden;
+}
+
+/* النجوم */
+.cosmic-stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="10" cy="10" r="0.5" fill="white"/><circle cx="30" cy="30" r="0.8" fill="white"/><circle cx="70" cy="20" r="0.3" fill="white"/><circle cx="90" cy="50" r="0.5" fill="white"/><circle cx="40" cy="80" r="0.8" fill="white"/><circle cx="60" cy="60" r="0.3" fill="white"/></svg>') repeat,
+    linear-gradient(to bottom, rgba(22, 22, 29, 0) 0%, rgba(22, 22, 29, 0.8) 100%);
+  animation: stars-move 200s linear infinite;
+}
+
+.cosmic-twinkling {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  animation: stars-twinkle 3s ease-in-out infinite alternate;
+}
+
+/* الشهب */
+.cosmic-meteors {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.meteor {
+  position: absolute;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+  animation: meteor-fall 10s linear infinite;
+}
+
+.meteor:nth-child(1) {
+  top: 10%;
+  left: -100px;
+  width: 300px;
+  height: 1px;
+  animation-delay: 0s;
+}
+
+.meteor:nth-child(2) {
+  top: 30%;
+  left: -200px;
+  width: 200px;
+  height: 1px;
+  animation-delay: 3s;
+}
+
+.meteor:nth-child(3) {
+  top: 50%;
+  left: -150px;
+  width: 250px;
+  height: 1px;
+  animation-delay: 6s;
+}
+
+/* الكوكب والنظام */
+.planet-system {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  perspective: 1000px;
+  margin-left: 36%;
+}
+
+.cosmic-planet {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, #592856 0%, #8b5cf6 100%);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 
+    0 0 60px rgba(99, 102, 241, 0.6),
+    inset 20px 0 40px rgba(255, 255, 255, 0.2);
+  animation: planet-rotate 30s linear infinite;
+}
+
+.planet-rings {
+  position: absolute;
+  width: 300px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(20deg);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.planet-glow {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.3) 0%, rgba(99, 102, 241, 0) 70%);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: planet-glow-pulse 4s ease-in-out infinite alternate;
+}
+
+.cosmic-satellite {
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  background: #ccc;
+  border-radius: 10px;
+  top: 30%;
+  left: 20%;
+  animation: satellite-orbit 15s linear infinite;
+}
+
+/* المحتوى النصي */
+.cosmic-content {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 3rem;
+  border-radius: 20px;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.2);
+}
+
+.cosmic-title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, #6366f1, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+}
+
+.cosmic-text-glow {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.cosmic-stats {
+  display: flex;
+  gap: 2rem;
+  margin-left: 29%;
+  margin-bottom: 4%;
+  margin-top: 4%;
+  /* margin: 2rem 0; */
+}
+
+.cosmic-stat {
+  background: rgba(154, 54, 124, 0.842);
+  padding: 1.5rem;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  transition: all 0.3s ease;
+}
+
+.cosmic-pulse {
+  animation: cosmic-pulse 2s infinite;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.skill-card {
+  background: rgba(30, 41, 59, 0.7);
+  padding: 1.2rem;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+}
+
+/* Animations */
+@keyframes stars-move {
+  from { background-position: 0 0; }
+  to { background-position: 1000px 1000px; }
+}
+
+@keyframes stars-twinkle {
+  from { opacity: 0.3; }
+  to { opacity: 1; }
+}
+
+@keyframes meteor-fall {
+  from { transform: translateX(0) translateY(0); }
+  to { transform: translateX(1000px) translateY(500px); }
+}
+
+@keyframes planet-rotate {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes planet-glow-pulse {
+  from { opacity: 0.3; transform: translate(-50%, -50%) scale(0.9); }
+  to { opacity: 0.7; transform: translate(-50%, -50%) scale(1.1); }
+}
+
+@keyframes satellite-orbit {
+  0% { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+@keyframes cosmic-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* التصميم المتجاوب */
+@media (max-width: 992px) {
+  .cosmic-container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .planet-system {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cosmic-title {
+    font-size: 2.2rem;
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .cosmic-stats {
+    flex-direction: column;
+  }
+}
+
+/* تنسيقات الخطوط الأساسية */
+.cosmic-content {
+  font-family: 'Poppins', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  line-height: 1.7;
+  letter-spacing: 0.3px;
+}
+
+/* العناوين */
+.cosmic-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, #6366f1, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+  font-family: 'Orbitron', 'Poppins', sans-serif;
+}
+
+.cosmic-subtitle {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 1.5rem 0;
+  color: #e2e8f0;
+  font-family: 'Orbitron', 'Poppins', sans-serif;
+  text-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+}
+
+/* الفقرات النصية */
+.cosmic-text {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #cbd5e1;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* النصوص المميزة */
+.cosmic-highlight {
+  color: #592856;
+  font-weight: 500;
+  text-shadow: 0 0 8px rgba(129, 140, 248, 0.6);
+}
+
+/* الإحصائيات */
+.cosmic-stat h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.cosmic-stat p {
+  font-size: 1rem;
+  color: #e2e8f0;
+  font-weight: 300;
+}
+
+/* بطاقات المهارات */
+.skill-card h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: #818cf8;
+}
+
+.skill-card p {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  font-weight: 300;
+}
+
+/* الروابط */
+.cosmic-link {
+  color: #818cf8;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 5px rgba(129, 140, 248, 0.5);
+}
+
+.cosmic-link:hover {
+  color: #a5b4fc;
+  text-shadow: 0 0 10px rgba(165, 180, 252, 0.7);
+}
+
+/* الأزرار */
+.cosmic-button {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* التأكيد على النصوص المهمة */
+.emphasis-text {
+  font-weight: 600;
+  color: #ec4899;
+  text-shadow: 0 0 8px rgba(236, 72, 153, 0.5);
+}
+
+/* التصميم المتجاوب للخطوط */
+@media (max-width: 992px) {
+  .cosmic-title {
+    font-size: 3rem;
+  }
+  
+  .cosmic-subtitle {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cosmic-title {
+    font-size: 2.5rem;
+  }
+  
+  .cosmic-text {
+    font-size: 1rem;
+  }
+  
+  .cosmic-stat h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .cosmic-title {
+    font-size: 2rem;
+    letter-spacing: 0;
+  }
+  
+  .cosmic-subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}

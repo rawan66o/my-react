@@ -1,0 +1,276 @@
+/* الخلفية الفضائية */
+.cosmic-projects {
+  position: relative;
+  background: radial-gradient(ellipse at top, #0f0c29 0%, #1a1a2e 100%);
+  color: #ffffff;
+  padding: 8rem 0;
+  overflow: hidden;
+}
+
+.cosmic-projects .cosmic-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.cosmic-projects .cosmic-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+/* بطاقات المشاريع */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+  margin-bottom: 6rem;
+}
+
+.project-card {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 0 30px var(--glow-color);
+}
+
+.project-image-container {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+.project-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, 
+    var(--glow-color) 0%, 
+    rgba(99, 102, 241, 0) 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-glow {
+  opacity: 0.3;
+}
+
+.project-content {
+  padding: 2rem;
+}
+
+.project-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #f8fafc;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(90deg, 
+    var(--glow-color), 
+    #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.project-description {
+  font-size: 1.05rem;
+  color: #cbd5e1;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-tag {
+  background: rgba(99, 102, 241, 0.2);
+  color: #a78bfa;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid rgba(129, 140, 248, 0.3);
+}
+
+/* الأزرار */
+.cosmic-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(90deg, 
+    var(--glow-color), 
+    #ec4899);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.3);
+}
+
+.cosmic-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 5px 20px var(--glow-color),
+    0 0 30px rgba(236, 72, 153, 0.4);
+}
+
+.button-icon {
+  transition: transform 0.3s ease;
+}
+
+.cosmic-button:hover .button-icon {
+  transform: translateX(3px);
+}
+
+/* الشهادة */
+.cosmic-testimonial {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 3rem;
+  border-radius: 20px;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.planet-system.small {
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+}
+
+.testimonial-content {
+  flex: 1;
+}
+
+.testimonial-text {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #e2e8f0;
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.testimonial-text::before {
+  content: '"';
+  position: absolute;
+  left: 0;
+  top: -1rem;
+  font-size: 4rem;
+  color: rgba(129, 140, 248, 0.2);
+  font-family: serif;
+  line-height: 1;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #ec4899);
+  flex-shrink: 0;
+}
+
+.author-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f8fafc;
+  margin-bottom: 0.2rem;
+}
+
+.author-role {
+  font-size: 0.9rem;
+  color: #a78bfa;
+}
+
+/* التصميم المتجاوب */
+@media (max-width: 992px) {
+  .cosmic-testimonial {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .testimonial-text {
+    padding-left: 0;
+  }
+  
+  .testimonial-text::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .testimonial-author {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-card {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .cosmic-projects {
+    padding: 5rem 0;
+  }
+  
+  .cosmic-header {
+    margin-bottom: 3rem;
+  }
+  
+  .project-title {
+    font-size: 1.5rem;
+  }
+}

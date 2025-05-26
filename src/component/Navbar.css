@@ -1,0 +1,153 @@
+/* التنسيقات العامة للنافبار مع تدرج لوني */
+.navbar {
+  background: linear-gradient(135deg, #4b0d4a 0%, #0c0956 100%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* تنسيقات اللوغو بتأثير مميز */
+.navbar-logo a {
+  color: #e94584; /* لون موف */
+  font-size: 2rem;
+  font-weight: 800;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: linear-gradient(to right, #e94584, #6c63ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.4s ease;
+  position: relative;
+  padding: 0.2rem 0;
+}
+
+.navbar-logo a:hover {
+  text-shadow: 0 0 15px rgba(233, 69, 132, 0.5);
+}
+
+.navbar-logo a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to right, #e94584, #6c63ff);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease;
+}
+
+.navbar-logo a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* تنسيقات القائمة مع تأثيرات متطورة */
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  margin-left: 2.5rem;
+  position: relative;
+}
+
+.navbar-link {
+  color: #f8f9fa;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: all 0.4s ease;
+  letter-spacing: 0.5px;
+}
+
+.navbar-link:hover {
+  color: #e94584;
+}
+
+.navbar-link::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to right, #6c63ff, #e94584);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-link:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+/* تأثيرات إضافية عند التنشيط */
+.navbar-item.active .navbar-link {
+  color: #6c63ff;
+  font-weight: 600;
+}
+
+/* تصميم متجاوب للهواتف */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    padding: 1rem;
+  background: #0f0f1a;
+  border-bottom: 1px solid #e94584;
+  }
+  
+  .navbar-logo {
+    margin-bottom: 1.2rem;
+  }
+  
+  .navbar-menu {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .navbar-item {
+    margin: 0.8rem 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .navbar-link {
+    display: block;
+    padding: 0.8rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-link:hover {
+    background: rgba(233, 69, 132, 0.1);
+    transform: translateX(5px);
+  }
+  
+  .navbar-link::before {
+    display: none;
+  }
+}
