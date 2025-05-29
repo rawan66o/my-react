@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-react/static/css/main.ca0edce1.css",
-    "main.js": "/my-react/static/js/main.ea98ca76.js",
+    "main.css": "/my-react/static/css/main.4070060c.css",
+    "main.js": "/my-react/static/js/main.9d02a79e.js",
     "static/js/453.ed3810f9.chunk.js": "/my-react/static/js/453.ed3810f9.chunk.js",
     "static/media/photo_2024-12-17_17-03-57.jpg": "/my-react/static/media/photo_2024-12-17_17-03-57.ef9702905037c4286362.jpg",
     "static/media/photo_2024-12-17_17-04-54.jpg": "/my-react/static/media/photo_2024-12-17_17-04-54.33043f2834ab254c90d6.jpg",
@@ -13,12 +13,12 @@
     "static/media/photo_2024-12-17_17-04-35.jpg": "/my-react/static/media/photo_2024-12-17_17-04-35.182bddea8043188e390c.jpg",
     "static/media/photo_2025-04-08_13-37-02.jpg": "/my-react/static/media/photo_2025-04-08_13-37-02.9593304f5152aa3d13c0.jpg",
     "index.html": "/my-react/index.html",
-    "main.ca0edce1.css.map": "/my-react/static/css/main.ca0edce1.css.map",
-    "main.ea98ca76.js.map": "/my-react/static/js/main.ea98ca76.js.map",
+    "main.4070060c.css.map": "/my-react/static/css/main.4070060c.css.map",
+    "main.9d02a79e.js.map": "/my-react/static/js/main.9d02a79e.js.map",
     "453.ed3810f9.chunk.js.map": "/my-react/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ca0edce1.css",
-    "static/js/main.ea98ca76.js"
+    "static/css/main.4070060c.css",
+    "static/js/main.9d02a79e.js"
   ]
 }
